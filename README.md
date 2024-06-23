@@ -143,3 +143,33 @@ var max = function (list) {
 ## Sum Mixed Array
 
 Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers. Return your answer as a number.
+
+### My Approach
+
+1. Function Declaration: The given function named `sumMix` take a single parameter `x`, which is expected to be an array of integers represented as either strings or numbers.
+2. Mapping Strings to Numbers: I used the `map` method to create a new array `numbers` where each element of `x` is converted to a number. The `Number` function is used to convert each element of `x` to a number.
+3. Sum Function Declaration: I created a nested helper function called `getSum` that takes two parameters, `total` and `num`, and returns their sum. This function is intended to be used as a callback for the array `reduce` method.
+4. Reducing to Sum: The `reduce` method is used on the `numbers` array to sum up all the elements. It starts with an inital value of `0`.
+
+#### What I learned:
+
+This exercise taught me how to convert mixed data types in JavaScript using the `Number()` function and the `map()` method. I deepened my understanding of the `reduce()` method for summing array values and the importance of modular code design. Additionally, I learned about different type conversion methods, explored resources like <a href="https://www.freecodecamp.org/news/how-to-convert-a-string-to-a-number-in-javascript/">freeCodeCamp</a>, and gained confidence in handling data types and using array methods effectively. This experience also encouraged me to explore advanced uses of `reduce()`.
+
+### Implementation
+
+Here is my function:
+
+```js
+function sumMix(x) {
+  //convert all array elements to numbers
+  const numbers = x.map(Number);
+
+  // sum function to be used in reduce
+  function getSum(total, num) {
+    return total + num;
+  }
+
+  // use reduce to get sum of all elements in the array.
+  return numbers.reduce(getSum, 0);
+}
+```
