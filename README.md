@@ -173,3 +173,53 @@ function sumMix(x) {
   return numbers.reduce(getSum, 0);
 }
 ```
+
+## Super Duper Easy and Keep up the hoop
+
+### Super Duper Easy
+
+Make a function that returns the value multiplied by 50 and increased by 6. If the value entered is a string it should return "Error".
+
+#### My Approach and What I Learned
+
+This challenge was straightforward; however, I initially made an error by placing `return x * 50 + 6` before my `if` statement. This caused the function to exit before the `if` statement could execute. This reminded me of the importance of order in coding and how return statements operate.
+
+#### Implementation
+
+```js
+function problem(x) {
+  // check if x is a string if so return "Error"
+  if (typeof x === "string") {
+    return "Error";
+  }
+  // run this line of code if not a string
+  return x * 50 + 6;
+}
+```
+
+### Keep up the hoop
+
+Alex just got a new hula hoop, he loves it but feels discouraged because his little brother is better than him.
+
+Write a program where Alex can input (`n`) how many times the hoop goes round and it will return him an encouraging message:
+
+- If Alex gets 10 or more hoops, return the string `"Great, now move on to tricks"`.
+- If he doesn't get 10 hoops, return the string `"Keep at it until you get it"`.
+
+#### My Approach
+
+For this challenge, I decided to use the ternary operator. I referred to W3Schools and MDN to quickly familiarize myself with the syntax.
+
+```sql
+Syntax: condition ? <expression if true> : <expression if false>
+```
+
+#### Implementation
+
+```js
+function hoopCount(n) {
+  return n >= 10
+    ? "Great, now move on to tricks"
+    : "Keep at it until you get it";
+}
+```
