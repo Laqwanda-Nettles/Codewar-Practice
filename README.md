@@ -223,3 +223,11 @@ function hoopCount(n) {
     : "Keep at it until you get it";
 }
 ```
+
+## Switch it Up!
+
+When provided with a number between 0-9, return it in words. If your language supports it, try using a switch statement.  
+Input: 1
+Output: 'One'
+
+### My Approach and What I Learned
